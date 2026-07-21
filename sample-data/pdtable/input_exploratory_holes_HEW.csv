@@ -1,0 +1,169 @@
+﻿File description:;geoCore input file containing exploratory hole information and how they may to geotechnical clusters/windfarm assets;;;;;;;;;;;;;;;;;;
+File purpose:;The file represents the authoratative catalogue of all geotechnical cluster locations and exploratory holes installed at an asset project;;;;;;;;;;;;;;;;;;
+File naming:;"""input_exploratory_holes_{area_code}.csv""";;;;;;;;;;;;;;;;;;
+File format:;"Shall be saved in the Geolog directory: ""G:\01_Departments\GTSC\Geolog\projects\{area_code}\data\input_files""";;;;;;;;;;;;;;;;;;
+"Supporting documentation:""";See geodb-connect repository doucmentation;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;
+***revision_history;;;;;;;;;;;;;;;;;;;
+date;author;accuracy_level;checked;QA_level;document_number;reviewed;accepted;restrictions;changelog;;;;;;;;;;
+20260720;JONWH;3;JONWH;1;;;;;First version;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;
+::revision_history;Keeps track of input_file revision history;;;;;;;;;;;;;;;;;;
+:date;Date of creation or modification of the file (yyyymmdd);;;;;;;;;;;;;;;;;;
+:author;Initials of the GA engineer taking responsibility for the document content;;;;;;;;;;;;;;;;;;
+:accuracy_level;An accuracy level (0-5) shall be assigned to the technical documentation relative to the project phases;;;;;;;;;;;;;;;;;;
+:accuracy_level.choice;0;Design Calculations: Preliminary. Based on regional experience and/or approximate conditions described.;;;;;;;;;;;;;;;;;
+:;;Examples of use: Determining whether a project can be outright rejected.;;;;;;;;;;;;;;;;;
+:accuracy_level.choice;1;Design Calculations: Preliminary. Based on estimates of suitable parameters from similar/neighbouring projects.;;;;;;;;;;;;;;;;;
+:;;Examples of use: Determine possible foundation concepts and preliminary budgets in early project development phases.;;;;;;;;;;;;;;;;;
+:accuracy_level.choice;2;Design Calculations: Preliminary. Based on estimated stratigraphy combined with site-specific global parameters (GT1).;;;;;;;;;;;;;;;;;
+:;;Examples of use: Diameter study;;;;;;;;;;;;;;;;;
+:accuracy_level.choice;3;Design Calculations: Detailed. Based on position specific stratigraphy and soil parameters (GT2); input parameters still not fully finalised.;;;;;;;;;;;;;;;;
+:;;Examples of use: Detailed design calculations;;;;;;;;;;;;;;;;;
+:accuracy_level.choice;4;Design Calculations: Detailed. Based on detailed position specific stratigraphy and soil parameters; input parameters not necessarily documented or certified.;;;;;;;;;;;;;;;;
+:;;Examples of use: Detailed design calculations;;;;;;;;;;;;;;;;;
+:accuracy_level.choice;5;Design Calculations: Detailed. Based on certified stratigraphy and input parameters.;;;;;;;;;;;;;;;;;
+:;;Examples of use: Final design calculations. Steel order.;;;;;;;;;;;;;;;;;
+:checked;Initials of GA lead engineer performing quality control and assurance of the document;;;;;;;;;;;;;;;;;;
+:QA_level;A QA framework (1-3) shall be considered in relation to the WTG foundation design process;;;;;;;;;;;;;;;;;;
+:QA_level.choice;1;Must always be performed.;;;;;;;;;;;;;;;;;
+:;;QA responsible: Preparer (self-check) - All geotechnical engineers (juniors to be assisted by appointed engineer).;;;;;;;;;;;;;;;;;
+:QA_level.choice;2;For any deliverable outside Ørsted's GEO dept.;;;;;;;;;;;;;;;;;
+:;;QA responsible: Reviewer - Senior specialist appointed by line manager.;;;;;;;;;;;;;;;;;
+:QA_level.choice;3;For any deliverable outside Ørsted (e.g. to certification organisations;;;;;;;;;;;;;;;;;
+:;;QA responsible: Reviewer - Senior Specialist appointed by line manager.;;;;;;;;;;;;;;;;;
+:document_number;Associated DORECO document number;;;;;;;;;;;;;;;;;;
+:reviewed;Initials of senior specialist performing independent QA of input file content;;;;;;;;;;;;;;;;;;
+:accepted;Initials of line management or senior specialist approval of ensuring consistent quality;;;;;;;;;;;;;;;;;;
+:restrictions;Restrictions on use of the file;;;;;;;;;;;;;;;;;;
+:changelog;Detail description of changes and motivation behind the changes introduced in this version of the file;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;
+**cluster_details;;;;;;;;;;;;;;;;;;;
+HEW02;;;;;;;;;;;;;;;;;;;
+index;cluster_name;site_investigation_reference;eastings;northings;seabed_level;water_level;comments;;;;;;;;;;;;
+-;text;text;m;m;m RL;m RL;text;;;;;;;;;;;;
+0;P35;GTP;658202.5;6244785;-21;0;;;;;;;;;;;;;
+1;P36;GTP;661127.5;6244230;-22;0;;;;;;;;;;;;;
+2;P39;GTP;656922.5;6242685;-19;0;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;
+::cluster_details;table containing geotechnical exploratory hole cluster information;;;;;;;;;;;;;;;;;;
+:index;;;;;;;;;;;;;;;;;;;
+:clustert_name;stable project-scoped internal identifier for the cluster location which must remain independent of layout revisions.;;;;;;;;;;;;;;;;;;
+:site_investigation_reference;"site investigation reference (to be consistent with ""LOCA_CLST"" AGS terms - as defined in Appendix 2 Annex 1 (00637136_F))";;;;;;;;;;;;;;;;;;
+:site_investigation_reference.choice;GTP;Preliminary geotechnical site investigation campaign (usually scoped and executed by others and subsequently acquired by Orsted);;;;;;;;;;;;;;;;;
+:site_investigation_reference.choice;GTL;Lite geotechnical site investigation campaign (typically comprising a limited scope, e.g. shallow CPTs and grab samples only);;;;;;;;;;;;;;;;;
+:site_investigation_reference.choice;GTR;Reconnaissance geotechnical site investigation campaign (usually comprises a number of geotechnical cluster locations to facilitate ground model development, unitisation etc.);;;;;;;;;;;;;;;;;
+:site_investigation_reference.choice;GTD;Detailed design geotechnical site invesitgation campign (comprises exploratory holes installed at every WTG and OSS location);;;;;;;;;;;;;;;;;
+:eastings;eastings coordinate;;;;;;;;;;;;;;;;;;
+:northings;northings coordinate;;;;;;;;;;;;;;;;;;
+:ground_level;ground or seabed level relative to the adopted vertical datum (usually negative for offshore sites);;;;;;;;;;;;;;;;;;
+:water_level;(sea) water level relative to the adopted vertical datum (usually zero for offshore sites);;;;;;;;;;;;;;;;;;
+:comments;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;
+**exploratory_hole_details;;;;;;;;;;;;;;;;;;;
+HEW02;;;;;;;;;;;;;;;;;;;
+index;contractor_hole_name;site_investigation_reference;hole_purpose;hole_type;hole_number;jacket_leg_label;bumpover_label;bumpover_parent_hole;hole_status;target_depth;final_depth;termination_reason;start_date;end_date;actual_easting;actual_northing;seabed_level;asset_or_cluster_name;comments
+-;text;text;text;text;text;text;text;text;text;m;m;text;yyyymmdd;yyyymmdd;m;m;m RL;text;text
+0;HS_S_02_BH;GTP;REC;EH;2;;;;ACCEPTED;70;62.3;WEATHER;20231016;20231018;665300.2;6254503.1;-27.53;;
+1;HS_S_06_BH;GTP;REC;EH;6;;;;COMPLETED;70;70.5;TARGET;20230907;20230909;670303.4;6252621;-25.56;;
+2;HS_S_11_BH;GTP;REC;EH;11;;;;FAILED;70;30.26;EQUIPMENT;20230906;20230906;664070.4;6250566.9;-28.93;;Excessive seabed frame sinkage
+3;HS_S_18_BH;GTP;REC;EH;18;;;;FAILED;70;6.96;EQUIPMENT;20231013;20231013;674718.7;6248818.8;-29.21;;Excessive seabed frame sinkage
+4;HS_S_21_BH;GTP;REC;EH;21;;;;COMPLETED;70;70.7;TARGET;20230925;20230928;667701.7;6248358.2;-23.81;;
+5;HS_S_22_BH;GTP;REC;EH;22;;;;FAILED;70;30.8;OTHER;20231022;20231023;660713;6248021.4;-22.53;;Borehole collapse
+6;HS_S_32_BH;GTP;REC;EH;32;;;;FAILED;70;23.42;EQUIPMENT;20230905;20230906;663173.1;6245256.9;-28.8;;Excessive seabed frame sinkage
+7;HS_S_38_BH;GTP;REC;EH;38;;;;COMPLETED;70;70.3;TARGET;20230911;20230914;659178.2;6243041.4;-20.98;;
+8;HS_S_01_DCPT;GTP;REC;DCPT;1;;;;COMPLETED;30;30.3;TARGET;20231001;20231001;664769.5;6256006;-28.2;;
+9;HS_S_03_DCPT;GTP;REC;DCPT;3;;;;FAILED;30;18.78;EQUIPMENT;20231002;20231002;663621.7;6253191.1;-27.97;;Excessive seabed frame sinkage
+10;HS_S_04_DCPT;GTP;REC;DCPT;4;;;;COMPLETED;30;31.12;TARGET;20230924;20230924;667649.6;6253071.6;-26.16;;
+11;HS_S_07_DCPT;GTP;REC;DCPT;7;;;;COMPLETED;30;30.18;TARGET;20231002;20231002;666182.8;6251628;-26.48;;
+12;HS_S_10_DCPT;GTP;REC;DCPT;10;;;;COMPLETED;30;30.1;TARGET;20231002;20231003;662059.1;6250630.6;-25.26;;
+13;HS_S_12_DCPT;GTP;REC;DCPT;12;;;;FAILED;30;19.64;EQUIPMENT;20230922;20230923;673717.6;6250545.4;-28.24;;Excessive seabed frame sinkage
+14;HS_S_13_DCPT;GTP;REC;DCPT;13;;;;COMPLETED;30;30.42;TARGET;20230923;20230924;670114.8;6250400.6;-23.25;;
+15;HS_S_14_DCPT;GTP;REC;DCPT;14;;;;FAILED;30;7.62;OTHER;20230529;20230529;667191.6;6249840.7;-24.93;;Emergency port call
+16;HS_S_16_DCPT;GTP;REC;DCPT;16;;;;FAILED;30;15.5;EQUIPMENT;20231005;20231005;662818.8;6248995.1;-27.18;;Excessive seabed frame sinkage
+17;HS_S_17_DCPT;GTP;REC;DCPT;17;;;;FAILED;30;2.76;EQUIPMENT;20230910;20230910;665031.7;6248789.3;-26.29;;Vessel survey equipment failure
+18;HS_S_20_DCPT;GTP;REC;DCPT;20;;;;COMPLETED;30;30.42;TARGET;20230923;20230923;671301.4;6248505.5;-26.07;;
+19;HS_S_23_DCPT;GTP;REC;DCPT;23;;;;COMPLETED;30;30.3;TARGET;20231023;20231023;666727.3;6247781.9;-24.8;;
+20;HS_S_24_DCPT;GTP;REC;DCPT;24;;;;FAILED;30;6.58;EQUIPMENT;20230921;20230921;676398.3;6247732.9;-29.62;;Excessive seabed frame sinkage
+21;HS_S_26_DCPT;GTP;REC;DCPT;26;;;;FAILED;30;2.76;EQUIPMENT;20230904;20230904;663574.7;6247362.2;-31.14;;Excessive seabed frame sinkage
+22;HS_S_27_DCPT;GTP;REC;DCPT;27;;;;COMPLETED;30;30.74;TARGET;20230922;20230922;673221.6;6247333.3;-26.94;;
+23;HS_S_28_DCPT;GTP;REC;DCPT;28;;;;COMPLETED;30;30.62;TARGET;20230916;20230916;670259.6;6246798;-24.1;;
+24;HS_S_29_DCPT;GTP;REC;DCPT;29;;;;ACCEPTED;30;29.66;TARGET;20230916;20230917;667359.6;6246247.5;-22.65;;
+25;HS_S_30_DCPT;GTP;REC;DCPT;30;;;;COMPLETED;30;30.38;TARGET;20230831;20230831;659664.8;6246234.4;-23;;
+26;HS_S_31_DCPT;GTP;REC;DCPT;31;;;;COMPLETED;30;30.18;TARGET;20230530;20230531;661892.5;6246045.9;-23.69;;
+27;HS_S_33_DCPT;GTP;REC;DCPT;33;;;;COMPLETED;30;30.16;TARGET;20230903;20230904;665188.9;6245206.4;-25.47;;
+28;HS_S_35_CPT;GTP;REC;CPT;35;;;;FAILED;30;1.42;EQUIPMENT;20230404;20230404;658199.8;6244785.2;-20.73;P35;Sudden cone inclination
+29;HS_S_35_DCPT;GTP;REC;DCPT;35;;;;COMPLETED;30;30.4;TARGET;20230830;20230830;658197.4;6244787.5;-21.1;P35;
+30;HS_S_36_CPT;GTP;REC;CPT;36;;;;ACCEPTED;30;-;OTHER;-;-;-;-;-;P36;Naming issue - superseded by bumpover locations
+31;HS_S_36_DCPT;GTP;REC;DCPT;36;;;;FAILED;30;6.42;EQUIPMENT;20230831;20230901;661122.7;6244226.3;-21.94;P36;Seabed frame inclination
+32;HS_S_37_DCPT;GTP;REC;DCPT;37;;;;ACCEPTED;30;29.14;TARGET;20230902;20230902;662559;6243297.2;-28.29;;Excessive seabed frame sinkage
+33;HS_S_39_CPT;GTP;REC;CPT;39;;;;FAILED;30;5.8;REFUSAL;20230406;20230406;656919.9;6242688.2;-18.7;P39;
+34;HS_S_39_DCPT;GTP;REC;DCPT;39;;;;ACCEPTED;30;-;OTHER;-;-;-;-;-;P39;Naming issue - superseded by bumpover locations
+35;HS_S_14_DCPT_A;GTP;REC;DCPT;14;;a;HS_S_14_DCPT;COMPLETED;30;31.08;TARGET;20230529;20230530;667193.4;6249835.5;-24.42;;
+36;HS_S_17_DCPT_A;GTP;REC;DCPT;17;;a;HS_S_17_DCPT;FAILED;30;7.4;OTHER;20230915;20230915;665032.1;6248783.9;-26.25;;Obstruction encountered
+37;HS_S_17_DCPT_B;GTP;REC;DCPT;17;;b;HS_S_17_DCPT;COMPLETED;30;30.04;TARGET;20230915;20230915;665037.1;6248790;-26.52;;
+38;HS_S_21_BH_B;GTP;REC;BH;21;;b;HS_S_21_BH;FAILED;30;0;WEATHER;20231009;20231010;667697.9;6248352.9;-23.67;;
+39;HS_S_35_CPT_A;GTP;REC;CPT;35;;a;HS_S_35_CPT;FAILED;30;9.92;REFUSAL;20230406;20230406;658202.1;6244789.8;-20.4;P35;
+40;HS_S_36_DCPT_A;GTP;REC;DCPT;36;;a;HS_S_36_DCPT;ACCEPTED;30;29.2;TARGET;20230901;20230901;661121;6244231.6;-22.06;P36;
+41;HS_S_39_CPT_A;GTP;REC;CPT;39;;a;HS_S_39_CPT;FAILED;30;6.74;EQUIPMENT;20230406;20230406;656922.2;6242692.3;-18.7;P39;
+42;HS_S_39_DCPT_A;GTP;REC;DCPT;39;;a;HS_S_39_CPT;COMPLETED;30;30.1;TARGET;20230828;20230829;656918;6242684.4;-19.25;P39;
+43;HS_S_36_CPT_A;GTP;REC;CPT;36;;a;HS_S_36_CPT;FAILED;30;1.56;EQUIPMENT;20230404;20230404;661126.1;6244233.9;-21.82;P36;Force sensor failure
+44;HS_S_36_CPT_B;GTP;REC;CPT;36;;b;HS_S_36_CPT;FAILED;30;4.52;REFUSAL;20230404;20230404;661128.5;6244227.1;-21.6;P36;
+45;HS_S_36_CPT_C;GTP;REC;CPT;36;;c;HS_S_36_CPT;FAILED;30;4;REFUSAL;20230404;20230404;661132.8;6244224.8;-21.97;P36;
+;;;;;;;;;;;;;;;;;;;
+::exploratory_hole_details;"table containing exploratory hole details -- this file is the campaign's FINAL, QAQC'd snapshot (see geodb/python/docs/pdtable-etl-mapping.md's ""Sequential handoff"" section)"; every hole_status value below must be a TERMINAL status (never SCHEDULED/INPROGRESS -- those live only in the EHS workbook while the survey is still in progress);;;;;;;;;;;;;;;;;
+:index;;;;;;;;;;;;;;;;;;;
+:contractor_hole_name;exploratory hole name assigned by the contractor (LOCA_ID in .ags files);;;;;;;;;;;;;;;;;;
+:site_investigation_reference;site investigation reference;;;;;;;;;;;;;;;;;;
+:site_investigation_reference.choice;GTP;Preliminary geotechnical site investigation campaign (usually scoped and executed by others and subsequently acquired by Orsted);;;;;;;;;;;;;;;;;
+:site_investigation_reference.choice;GTL;Lite geotechnical site investigation campaign (typically comprising a limited scope, e.g. shallow CPTs and grab samples only);;;;;;;;;;;;;;;;;
+:site_investigation_reference.choice;GTR;Reconnaissance geotechnical site investigation campaign (usually comprises a number of geotechnical cluster locations to facilitate ground model development, unitisation etc.);;;;;;;;;;;;;;;;;
+:site_investigation_reference.choice;GTD;Detailed design geotechnical site invesitgation campign (comprises exploratory holes installed at every WTG and OSS location);;;;;;;;;;;;;;;;;
+:hole_purpose;reason for installing exploratory hole (can be for a physcial wind farm asset like a WTG or OSS location, or a geotechnical cluster at a reconnaissance/cable location);;;;;;;;;;;;;;;;;;
+:hole_purpose.choice;ANS;Artificial nesting structure;;;;;;;;;;;;;;;;;
+:hole_purpose.choice;ECR;Export cable route location;;;;;;;;;;;;;;;;;
+:hole_purpose.choice;IAC;Inter-array cable location;;;;;;;;;;;;;;;;;
+:hole_purpose.choice;MET;Meteorological mast;;;;;;;;;;;;;;;;;
+:hole_purpose.choice;OCS;Offshore converter station;;;;;;;;;;;;;;;;;
+:hole_purpose.choice;OSS;Offshore substation;;;;;;;;;;;;;;;;;
+:hole_purpose.choice;OTHER;Other (undefined) asset type;;;;;;;;;;;;;;;;;
+:hole_purpose.choice;RCS;Reactive converter station;;;;;;;;;;;;;;;;;
+:hole_purpose.choice;REC;Geotechnical reconnaissance location;;;;;;;;;;;;;;;;;
+:hole_purpose.choice;WTG;Wind turbine generator;;;;;;;;;;;;;;;;;
+:hole_type;exploratory hole type keyword;;;;;;;;;;;;;;;;;;
+:hole_type.choice;EH;exploratory hole;;;;;;;;;;;;;;;;;
+:hole_type.choice;BH;borehole;;;;;;;;;;;;;;;;;
+:hole_type.choice;GS;grab sample;;;;;;;;;;;;;;;;;
+:hole_type.choice;NP;needle probe;;;;;;;;;;;;;;;;;
+:hole_type.choice;CPT;seabed cone penetration test;;;;;;;;;;;;;;;;;
+:hole_type.choice;DCPT;downhole cone penetration test;;;;;;;;;;;;;;;;;
+:hole_type.choice;SCPT;seismic cone penetration test;;;;;;;;;;;;;;;;;
+:hole_type.choice;SDCPT;seismic downhole cone penetration test;;;;;;;;;;;;;;;;;
+:hole_type.choice;TCPT;thermal cone penetration test;;;;;;;;;;;;;;;;;
+:hole_type.choice;VC;vibrocore;;;;;;;;;;;;;;;;;
+:hole_number;exploratory hole number (can be alpha-numeric, e.g. A01);;;;;;;;;;;;;;;;;;
+:jacket_leg_label;jacket leg label number. Upper-case letters or numbers;;;;;;;;;;;;;;;;;;
+:bumpover_label;bumpover label. Incrementally increasing letters;;;;;;;;;;;;;;;;;;
+:bumpover_parent_hole;contractor_hole_name of the hole this row bumps over (must be blank if bumpover_label is blank, and vice versa; must not name this row's own contractor_hole_name);;;;;;;;;;;;;;;;;
+:hole_status;final lifecycle status of the hole. MUST be a terminal status (see reference.hole_status.is_terminal) -- SCHEDULED/INPROGRESS values are rejected, since this file is only ever the campaign's completed, QAQC'd snapshot;;;;;;;;;;;;;;;;;;
+:hole_status.choice;COMPLETED;Achieved target depth (or contractual acceptance criteria) as planned;;;;;;;;;;;;;;;;;
+:hole_status.choice;ACCEPTED;Terminated short of target depth but accepted by the project as complete; no bumpover required;;;;;;;;;;;;;;;;
+:hole_status.choice;FAILED;Terminated prematurely (early refusal, equipment failure, tool loss etc.) and not accepted; typically superseded by a bumpover;;;;;;;;;;;;;;;;
+:hole_status.choice;ABANDONED;Attempted or partially attempted, then abandoned by project decision; will not be completed or bumped over;;;;;;;;;;;;;;;;
+:hole_status.choice;CANCELLED;Removed from the schedule before any attempt was made;;;;;;;;;;;;;;;;;
+:target_depth;planned target depth of the hole below seabed/ground level;;;;;;;;;;;;;;;;;;
+:final_depth;actual achieved depth of the hole below seabed/ground level;;;;;;;;;;;;;;;;;;
+:termination_reason;why the hole stopped at final_depth; blank/NULL for SCHEDULED or CANCELLED holes (see reference.termination_reason);;;;;;;;;;;;;;;;;
+:termination_reason.choice;TARGET;Terminated at target depth;;;;;;;;;;;;;;;;;
+:termination_reason.choice;REFUSAL;Refusal above target depth (e.g. cone refusal, spudcan/hard stratum);;;;;;;;;;;;;;;;;
+:termination_reason.choice;EQUIPMENT;Tool, rig or vessel equipment failure;;;;;;;;;;;;;;;;;
+:termination_reason.choice;WEATHER;Terminated due to weather or operational downtime;;;;;;;;;;;;;;;;;
+:termination_reason.choice;PROJECT;Terminated or abandoned by project/client instruction;;;;;;;;;;;;;;;;;
+:termination_reason.choice;OTHER;Other reason; see comments;;;;;;;;;;;;;;;;
+:start_date;date operations commenced at the position (yyyymmdd);;;;;;;;;;;;;;;;;;
+:end_date;date operations concluded at the position (yyyymmdd);;;;;;;;;;;;;;;;;;
+:actual_easting;"as-installed easting coordinate, as recorded by the final EHS re-issue; blank if not surveyed/known, in which case the load pipeline falls back to the linked asset/cluster's design position";;;;;;;;;;;;;;;;;;
+:actual_northing;"as-installed northing coordinate, as recorded by the final EHS re-issue; blank if not surveyed/known, in which case the load pipeline falls back to the linked asset/cluster's design position";;;;;;;;;;;;;;;;;;
+:seabed_level;seabed/ground level as observed at time of works at this specific hole position (m RL) -- distinct from cluster_details.ground_level, which is only an approximate level for the cluster as a whole; blank if not observed;;;;;;;;;;;;;;;;;
+:asset_or_cluster_name;asset or cluster name (e.g. WTG_A01);;;;;;;;;;;;;;;;;;
+:comments;;;;;;;;;;;;;;;;;;;
